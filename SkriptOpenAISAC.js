@@ -6,7 +6,7 @@ var ajaxCall = (key, url, prompt) => {
       dataType: "json",
       data: JSON.stringify({
         prompt: prompt,
-        max_tokens: 30000, // Note: Ensure this value doesn't exceed the model's context length.
+        max_tokens: 3000, // Note: Ensure this value doesn't exceed the model's context length.
         n: 1,
         temperature: 0.5,
       }),
