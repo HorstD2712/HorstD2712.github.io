@@ -27,7 +27,7 @@ var ajaxCall = (key, url, prompt) => {
   });
 };
 
-const url = "https://fhcchataijaxtvcnemi7zo.openai.azure.com/openai/deployments/chat-gpt-4-32k";
+const url = "https://fhcchataijaxtvcnemi7zo.openai.azure.com/openai/deployments/chat-gpt-35-turbo";
 
 (function () {
   const template = document.createElement("template");
