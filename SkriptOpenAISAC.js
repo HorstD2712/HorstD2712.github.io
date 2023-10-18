@@ -50,6 +50,3 @@ const url = "https://fhcchataijaxtvcnemi7zo.openai.azure.com/openai/deployments/
   }
   customElements.define("custom-widget", MainWebComponent);
 })();
-
-///completions?api-version=2023-08-01-preview 
-//das ist endpoint
