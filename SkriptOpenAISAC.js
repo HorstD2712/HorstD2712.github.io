@@ -5,15 +5,14 @@ var ajaxCall = (key, url, prompt) => {
       type: "POST",
       dataType: "json",
       data: JSON.stringify({
-        model: "gpt-35-turbo",
         prompt: prompt,
-        max_tokens: 30000,
+        max_tokens: 30000, // Note: Ensure this value doesn't exceed the model's context length.
         n: 1,
         temperature: 0.5,
       }),
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${key}`,
+        "api-key": key,
       },
       crossDomain: true,
       success: function (response, status, xhr) {
@@ -28,7 +27,7 @@ var ajaxCall = (key, url, prompt) => {
   });
 };
 
-const url = "https://openaiprototype.openai.azure.com";
+const url = "https://fhcchataijaxtvcnemi7zo.openai.azure.com/openai/deployments/chat-gpt-4-32k";
 
 (function () {
   const template = document.createElement("template");
@@ -51,3 +50,6 @@ const url = "https://openaiprototype.openai.azure.com";
   }
   customElements.define("custom-widget", MainWebComponent);
 })();
+
+///completions?api-version=2023-08-01-preview 
+//das ist endpoint
